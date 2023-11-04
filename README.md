@@ -5,7 +5,7 @@ A chatbot to help people suffering from depression to feel better by talking wit
 ![proof](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/3743abf9-e729-4371-a348-e39106b073a6)
 
 # Polarity graph
-![image](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/074950b4-182d-4d44-94f9-143ed2027fcb)
+![sentiment_plot](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/397c5800-8a4a-4c7a-8824-3b7c72117a5d)
 
 
 # Abstract
