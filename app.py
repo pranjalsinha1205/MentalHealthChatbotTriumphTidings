@@ -32,7 +32,7 @@ def generate_response(query):
     # Plot user's polarity against message number
     plt.figure(figsize=(8, 6))
     plt.plot(message_numbers, user_polarities, marker='o', color='b', label='User Polarity')
-    plt.xlabel('N')
+    plt.xlabel('Number of Observations(N)')
     plt.ylabel('User Polarity')
     plt.title('User Polarity Distribution')
     plt.legend()
