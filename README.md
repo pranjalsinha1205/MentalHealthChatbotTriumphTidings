@@ -5,11 +5,17 @@ A chatbot to help people suffering from depression to feel better by talking wit
 ![proof](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/3743abf9-e729-4371-a348-e39106b073a6)
 
 # Polarity graph
-![WhatsApp Image 2023-11-04 at 11 36 02_8847e0c6](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/55ad5867-ad59-425a-aa5c-b262c434f09c)
+![sentiment_plot](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/e6d003b4-33c3-4a5f-8db5-dba59544c252)
 
 
 # Abstract
-In an era where the world is more interconnected than ever, the scourge of loneliness continues to plague individuals, especially students, who find themselves far from the comforting embrace of home. This project, titled "Triumph Tidings," endeavours to bridge the emotional dilemma faced by college students, particularly those living away from their families. Loneliness, if left unaddressed, can lead to severe consequences, ranging from mental health issues to drastic and impulsive decisions. Triumph Tidings emerges as a beacon of support, utilizing cutting-edge technology to provide solace and companionship to those in need.
+Mental health is a major public health concern, with millions of people suffering from depression, anxiety, and other mental health conditions. Chatbots have the potential to provide a valuable tool for supporting mental health, by offering confidential and accessible support. This project presents the development of a mental health chatbot that can be used to provide emotional support and resources to people who are feeling lonely, depressed, or anxious.
+
+The chatbot was developed using a combination of machine learning and natural language processing techniques. The chatbot is trained on a dataset of conversations between people who are struggling with mental health challenges and mental health professionals. This training allows the chatbot to learn how to respond to user input in a way that is both supportive and informative.
+
+The chatbot can be used by people of all ages and backgrounds. It is easy to use and does not require any prior knowledge of mental health conditions. The chatbot can be accessed through a variety of platforms, including web chat, mobile app, and SMS.
+
+The chatbot is designed to be used as a supplement to professional mental health care. It is not intended to diagnose or treat mental health conditions. However, the chatbot can provide valuable support and resources to people who are struggling with mental health challenges.
 
 # Introduction
 In the bustling corridors of higher education, where knowledge intertwines with ambition, a silent epidemic pervades the lives of countless students: loneliness. The college experience, often hailed as a time of intellectual growth and personal discovery, can be paradoxically isolating. For many, the transition from the familiarity of home to an unfamiliar campus in a different city or country can trigger profound feelings of solitude. This phenomenon is not limited by geographical boundaries; rather, it reverberates in dormitories, lecture halls, and communal spaces worldwide.
@@ -37,16 +43,87 @@ By analyzing these existing solutions, TriumphTidings aims to draw inspiration a
 
 
 # PROBLEM STATEMENT
-The alarming rise in mental health issues, exacerbated by the challenges of modern life, necessitates innovative solutions. A significant problem lies in the lack of accessible and personalized mental health support. Traditional therapy methods face limitations due to high costs, stigma, and limited availability. Furthermore, many individuals, especially students and young adults, struggle with feelings of loneliness and anxiety, particularly in the context of the ongoing pandemic. TriumphTidings addresses this critical gap by offering an AI-powered mental health chatbot. This chatbot provides an empathetic, understanding presence, guiding users through their emotions, promoting self-awareness, and delivering coping mechanisms. The project's primary goal is to offer immediate, stigma-free, and effective mental health support to those in need, ensuring no one faces their battles alone.
+The alarming rise in mental health issues, fueled by the challenges of modern life, necessitates innovative solutions. 
+A significant problem lies in the lack of accessible and personalized mental health support. Traditional therapy methods face limitations due to high costs, stigma, and limited availability. Furthermore, many individuals, especially students and young adults, struggle with feelings of loneliness and anxiety, particularly due to being away from home and the constant fear of future. 
+TriumphTidings addresses this critical gap by offering an AI-powered mental health chatbot. This chatbot provides an empathetic, understanding presence, guiding users through their emotions, promoting self-awareness, and delivering coping mechanisms. The project's primary goal is to offer immediate, stigma-free, and effective mental health support to those in need, ensuring no one faces their battles alone.
 
 # APPROACH
-TriumphTidings employs Natural Language Processing (NLP) and machine learning techniques to create an empathetic AI chatbot. Utilizing NLTK for language processing, the chatbot analyzes user inputs, identifying emotions and intents. The core of the system lies in a deep learning model constructed using a neural network with layers of dense, dropout, and softmax activation functions. This model is trained on a dataset containing categorized patterns and responses. The training enables the bot to understand and respond contextually. The graphical user interface (GUI) is built using Tkinter, enhancing user experience. TriumphTidings stands out for its personalized approach, tailoring responses to individual emotional states. Additionally, it incorporates features for recommending stress-buster exercises, fostering user engagement. The approach ensures a holistic, user-friendly, and effective mental health support system, promoting emotional well-being.
+TriumphTidings employs Natural Language Processing (NLP) and machine learning techniques to create an empathetic AI chatbot. Utilizing NLTK for language processing, the chatbot analyzes user inputs, identifying emotions and intents. 
+This model is trained on a dataset containing categorized patterns and responses.(Dataset taken from Kaggle, link: https://www.kaggle.com/datasets/elvis23/mental-health-conversational-data) and 
+
+this link from GitHub:
+https://github.com/cherrywine-04/-MindfulMate/blob/main/intents1.json
+The training enables the bot to understand and respond contextually. The graphical user interface (GUI) is built using Flask, enhancing user experience. TriumphTidings stands out for its personalized approach, tailoring responses to individual emotional states. 
+Additionally, it incorporates features for recommending stress-buster exercises, fostering user engagement. The approach ensures a holistic, user-friendly, and effective mental health support system, promoting emotional well-being.
+Also, it give a graph showing the polarity trends of the user which in turn will help the medical or psychiatric practitioners to further understand the user’s mental health at least upto some extent.
 
 # Algorithms:
-TriumphTidings integrates two key algorithms: Natural Language Processing (NLP) for understanding user inputs and a deep learning algorithm for generating responses. NLP algorithms tokenize and lemmatize user queries, breaking them down into comprehensible patterns. These patterns are then fed into the deep learning algorithm, a Multilayer Perceptron (MLP) neural network. The MLP consists of layers for input, hidden, and output. Input nodes represent words in the vocabulary, while output nodes signify intents. Dropout layers prevent overfitting, ensuring the model generalizes well to unseen data. The softmax activation function at the output layer categorizes intents probabilistically, enabling the bot to choose the most appropriate response.
+1) LSTM (Long Short-Term Memory): LSTM neural network is used for sequence modeling and prediction of user intents from their input.
+
+2) Word Embedding: Words are represented as dense vectors to capture semantic relationships, enhancing the model's understanding of language nuances.
+
+3) Tokenization: The process of breaking down text into words or subwords, essential for preparing text data for analysis.
+
+4) Lemmatization: Lemmatization is the process of reducing words to their base or root form, ensuring different forms of words are treated as the same, aiding in better analysis.
+
+5) Vader: Used to assign polarity between -1 and 1 to each and every sentence written by the user, if the polarity is >0.5, the user is +ve, if it is <0.5 the user is negative, and anything between that is neutral or partially positive or negative
+
+These algorithms collectively contribute to the chatbot's ability to process user input, understand context, and generate appropriate responses.
 
 # Algorithm Explanation
-In the NLP algorithm, user inputs undergo tokenization and lemmatization, reducing words to their root forms. These processed tokens form a bag of words, representing the input pattern. The deep learning algorithm, an MLP neural network, takes this bag of words as input. The network consists of densely connected layers, trained on labeled data. During training, the model learns the mapping between input patterns and intents. Dropout layers prevent reliance on specific nodes, enhancing generalization. At inference, user inputs are converted into bag-of-words representations and fed into the trained MLP. The softmax activation function categorizes the input, enabling TriumphTidings to deliver contextually appropriate responses.
+1) Tokenization and Lemmatization:
+
+  i) Intent Data Preparation:
+  The chatbot loads intent data from a JSON file, containing patterns and corresponding responses for various user intents.
+  ii) Tokenization and Lemmatization:
+    a)	User input, as well as patterns from intents, are tokenized into words to break down sentences into individual components.
+    b)	The NLTK library is employed to lemmatize the words, reducing them to their base or root form, ensuring uniformity and enhancing analysis.
+    c) These processed words are organized into a bag of words, forming    the basis for understanding user input patterns.
+
+2) Neural Network Model Construction:
+
+  i) Architecture Setup:
+    a) A Neural Network model is constructed using the Keras library, comprising input, hidden, and output layers.
+    b) Input layer: Accepts numerical vectors derived from the bag of words representing input patterns.
+    c) Hidden layers: These layers process and learn complex patterns within the input data, enhancing the model's understanding.
+    d) Output layer: Produces probabilities for each intent class, indicating the likelihood of the user's input corresponding to a specific intent.
+
+  ii) Training Process:
+    a)	Input patterns are converted into numerical vectors to be used for training the Neural Network model.
+    b) The model is trained using categorical cross-entropy loss function and the Adam optimizer, iterating through epochs to refine its accuracy.
+
+3) User Input Processing:
+
+  i) Preprocessing User Input:
+    a) User input is tokenized and lemmatized to ensure consistency and uniformity.
+    b) The processed input is converted into a bag of words, aligning it with the format used during training.
+  ii) Intent Prediction:
+    a)	The trained Neural Network model predicts the intent class probabilities for the preprocessed user input.
+    b) If the highest predicted probability exceeds a predefined threshold (ERROR_THRESHOLD), the corresponding intent is identified as the user's intent.
+
+4) Generating Responses:
+
+  i) Intent-Based Response Selection:
+    a) If a valid intent is recognized based on the predicted probabilities exceeding the threshold:
+    b) A relevant response is randomly selected from the pre-defined responses associated with that intent.
+
+  ii) Fallback to Default Response:
+    a)	If no valid intent is found (probabilities below the threshold):
+      a.1) A default response, indicating a lack of understanding, is generated, ensuring a response even in ambiguous situations.
+
+  This modular approach allows the chatbot to process user input effectively, predict intents accurately, and generate contextually appropriate responses, enhancing the user experience and interaction quality.
+
+5) Sentiment Analysis: Sentiment analysis is performed using the VADER (Valence Aware Dictionary and Sentiment Reasoner) tool, tailored for social media text analysis. The process involves:
+  i) Intent Data Preparation:
+  Intent data is loaded from a JSON file, containing user patterns and responses.
+  ii) Tokenization and Sentiment Analysis:
+    a) User input is tokenized into sentences for analysis.
+    b) The NLTK library is used for tokenization and lemmatization.
+    c) Sentiment analysis with VADER assigns a compound score to assess the text's overall sentiment.
+  iii) Data Visualization:
+  Sentiment analysis results, including compound scores, are plotted against message numbers using Matplotlib. This graphical representation provides insights into the conversation's emotional tone over time.
 
 # Conclusion
-In conclusion, TriumphTidings represents a significant step toward addressing the mental health challenges faced by individuals, especially those battling loneliness and depression. Leveraging advanced technologies like NLP and deep learning, the chatbot engages users in natural conversations, offering empathetic support and helpful resources. By focusing on promoting proactive mental well-being, TriumphTidings aims to empower individuals to overcome their struggles actively. As an innovative tool, it not only provides companionship but also suggests coping mechanisms and stress relief techniques. Moving forward, continual enhancements and user feedback integration will refine TriumphTidings, ensuring it remains a reliable and compassionate companion on the journey to mental health recovery. This project underscores the transformative potential of technology in fostering emotional well-being and offers a beacon of hope for those in need.
+In conclusion, the development of this mental health chatbot represents a significant step toward providing accessible and empathetic support for individuals struggling with loneliness and depression. By leveraging natural language processing and machine learning techniques, the chatbot can engage users in meaningful conversations, offering a virtual companion that understands their emotions and responds with empathy. The integration of LSTM neural networks and word embedding enables the chatbot to comprehend the complexity of human language, making it capable of generating contextually relevant and sensitive responses.
+While the chatbot demonstrates promising results, there is still room for improvement. Further research and development could focus on enhancing the chatbot's emotional intelligence, refining its ability to recognize subtle cues in user input, and expanding its repertoire of responses to cater to a wider range of situations. Additionally, user feedback and real-world testing are essential to iteratively improve the chatbot's effectiveness and user experience.
+Overall, this project showcases the potential of technology in addressing mental health challenges and highlights the importance of continued innovation in the field of mental health support systems. Through thoughtful design, rigorous testing, and ongoing refinement, mental health chatbots can become valuable companions, offering solace and understanding to those in need.
