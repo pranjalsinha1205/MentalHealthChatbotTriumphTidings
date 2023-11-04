@@ -1,7 +1,12 @@
 # MentalHealthChatbotTriumphTidings
 A chatbot to help people suffering from depression to feel better by talking with the chatbot. 
 
+# Chat with the bot
 ![proof](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/3743abf9-e729-4371-a348-e39106b073a6)
+
+# Polarity graph
+![WhatsApp Image 2023-11-04 at 11 36 02_8847e0c6](https://github.com/pranjalsinha1205/MentalHealthChatbotTriumphTidings/assets/112460531/55ad5867-ad59-425a-aa5c-b262c434f09c)
+
 
 # Abstract
 In an era where the world is more interconnected than ever, the scourge of loneliness continues to plague individuals, especially students, who find themselves far from the comforting embrace of home. This project, titled "Triumph Tidings," endeavours to bridge the emotional dilemma faced by college students, particularly those living away from their families. Loneliness, if left unaddressed, can lead to severe consequences, ranging from mental health issues to drastic and impulsive decisions. Triumph Tidings emerges as a beacon of support, utilizing cutting-edge technology to provide solace and companionship to those in need.
