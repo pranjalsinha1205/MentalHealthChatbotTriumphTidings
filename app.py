@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import matplotlib.pyplot as plt
+
 
 app = Flask(__name__)
 
@@ -9,9 +12,32 @@ import GUIChatbot
 chat_history = []
 
 # Create a function to generate responses from your chatbot
+# Create a Sentiment Intensity Analyzer object
+sid = SentimentIntensityAnalyzer()
+
+# Modify the generate_response function to include sentiment analysis and plot creation
 def generate_response(query):
     response = GUIChatbot.get_response(query)
-    chat_history.append({'user': query, 'bot': response})
+    
+    # Analyze sentiment of the user's input
+    user_sentiment = sid.polarity_scores(query)['compound']
+    
+    # Append user sentiment and chat history to a global list
+    chat_history.append({'user': query, 'bot': response, 'sentiment': user_sentiment})
+    
+    # Extract message numbers and user polarities for plotting
+    message_numbers = list(range(1, len(chat_history) + 1))
+    user_polarities = [entry['sentiment'] for entry in chat_history]
+    
+    # Plot user's polarity against message number
+    plt.figure(figsize=(8, 6))
+    plt.plot(message_numbers, user_polarities, marker='o', color='b', label='User Polarity')
+    plt.xlabel('N')
+    plt.ylabel('User Polarity')
+    plt.title('User Polarity Distribution')
+    plt.legend()
+    plt.savefig('static/sentiment_plot.png')  # Save the plot as an image file
+    
     return response
 
 # Define the index route
