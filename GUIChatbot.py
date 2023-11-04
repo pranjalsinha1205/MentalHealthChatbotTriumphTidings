@@ -1,5 +1,3 @@
-import tkinter as tk    #for gui
-from tkinter import scrolledtext   #for scrollable text as in real chat
 import nltk   #for language processing
 import numpy as np  #for scientific calculations
 import json  #for importing the intents json file
