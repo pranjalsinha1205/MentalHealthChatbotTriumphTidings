@@ -2,14 +2,16 @@
 <html>
 <head>
     <title>Triumph Tidings</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .chat-box {
-            max-height: 460px;
-            height: 455px;
+            height: 460px;
+            max-height: 455px;
             overflow-y: scroll;
             border-radius: 40px;
-            border: solid black;
+            border: 10px solid black;
             background-image: url('/static/scene3.jpg');            
             background-size: cover;
             background-repeat: no-repeat;
@@ -39,18 +41,58 @@
             margin-bottom: 10px;
         }
         .input-box {
-            border: 2px solid blue;
+            border: 10px solid black;
             border-radius: 30px;
-            padding: 10px;
             margin-top: 10px;
+        }
+        #top-bar {
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #about {
+            color: white;
+            text-align: left;
+            padding: 5px;
+            padding-left: 15%;
+        }
+
+        #about:hover {
+            color: orange;
+        }
+
+        #hotlines {
+            color: white;
+            text-align: right;
+            padding: 5px;
+            margin-right: 15%;
+        }
+
+        #hotlines:hover {
+            color: orange;
+        }
+
+        .text-center {
+            text-align: center;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .text-center:hover{
+            color: orange;
         }
     </style>
 </head>
-<body style="background-color: black; color: white;">
+<body style="background-color: black; color: white; background-image: url('/static/scrollup1.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <div id="top-bar">
+        <a href="{{ url_for('static', filename='about.html') }}" id="about" target="_blank">About</a>
+        <h1 class="text-center" title="This is not a link :D">Triumph Tidings</h1>
+        <a href="{{ url_for('static', filename='hotlines.html') }}" id="hotlines" target="_blank">Seek Help</a>
+    </div>
     <br>
     <div class="container">
-        <h1 class="text-center">Triumph Tidings</h1>
-        <br>
         <div class="chat-box">
             {% for entry in chat_history %}
                 {% if entry.user %}
@@ -67,11 +109,10 @@
             <div class="form-group input-box">
                 <input type="text" class="form-control" name="query" placeholder="Please talk with me..." autofocus style="border-radius: 30px;">
             </div>
-            <button type="submit" class="btn btn-primary" style="border-radius: 20px;">Send</button>
+            <button type="submit" class="btn btn-primary" style="border-radius: 20px; border: 5px solid black;">Send</button>
         </form>
     </div>
 
-    <!-- JavaScript to scroll chat box to the bottom -->
     <script>
         var chatBox = document.querySelector('.chat-box');
         chatBox.scrollTop = chatBox.scrollHeight;

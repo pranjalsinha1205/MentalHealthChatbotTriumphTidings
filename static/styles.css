@@ -1,0 +1,99 @@
+body{
+    background-color: #0c012e;
+}
+#top-bar {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0lvw;
+}
+
+#about {
+    color: white;
+    text-align: left;
+    padding: 5px;
+    margin-left: 15%;
+}
+
+#about:hover {
+    color: orange;
+}
+
+#hotlines {
+    color: white;
+    text-align: right;
+    padding: 5px;
+    padding-right: 15%;
+}
+
+#hotlines:hover {
+    color: orange;
+}
+
+.text-center {
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text-center:hover{
+    color: orange;
+}
+
+p, h1{
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 18;
+    color: wheat;
+    padding: 5px;
+}
+
+#first{
+    height: 50vh;
+    width: 70vw;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 10px solid white;
+}
+
+#hope{
+    height: 60vh;
+    width: 70vw;
+    margin: 15px;
+    border-radius: 30px;
+    border: 10px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.data{
+    height: 50vh;
+    width: 50vw;
+    margin: 15px;
+    padding: 10px;
+    align-items: center;
+}
+
+.titles{
+    color: white;
+    padding: 5px;
+}
+
+.titles:hover{
+    color: blue;
+}
+
+.para{
+    margin: 10px;
+    padding: 10px;
+}
+
+.nmhs:hover{
+    background-color: orange;
+    color: black;
+}

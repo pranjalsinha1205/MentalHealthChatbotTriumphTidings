@@ -1,0 +1,79 @@
+#top-bar {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about {
+    color: white;
+    text-align: left;
+    padding: 5px;
+    margin-left: 15%;
+}
+
+#about:hover {
+    color: orange;
+}
+
+#hotlines {
+    color: white;
+    text-align: right;
+    padding: 5px;
+    margin-right: 15%;
+}
+
+#hotlines:hover {
+    color: orange;
+}
+
+.text-center {
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-center:hover{
+    color: orange;
+}
+
+p, h1{
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 18;
+    color: wheat;
+    padding: 5px;
+}
+
+.para{
+    margin: 20px;
+    padding: 10px;
+}
+
+.titles:hover{
+    color: blue;
+}
+
+.help{
+    height: 60vh;
+    width: 70vw;
+    margin: 15px;
+    border-radius: 30px;
+    border: 10px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.assistance{
+    color: blue;
+}
+
+.assistance:hover{
+    color: orange;
+}
+
+.assistance:active{
+    color: blue;
+}
